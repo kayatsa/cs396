@@ -1,0 +1,52 @@
+body,html {
+	position: relative;
+}
+
+body {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+h1,h2,h3 {
+	font-family: 'consolas', monospace;
+}
+
+
+/* Set the size of the containers */
+.drawing {
+	box-sizing: border-box;
+	margin: 10px;
+	vertical-align: top;
+	background-color: black;
+	display: inline-block;
+}
+
+.drawing-label {
+	font-family: monospace;
+	font-weight: bold;
+	margin: 10px;
+	text-align: center;
+}
+
+.drawing-p5holder {
+	box-sizing: border-box;
+	margin: 10px;
+}
+
+canvas {
+	border: 1px solid white;
+}
+
+#main-column {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%, -55%);
+	width: 500px;
+	text-align: center;
+}
+
+#buttons {
+	margin-top: 20px;
+}

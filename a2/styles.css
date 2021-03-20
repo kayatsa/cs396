@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "consolas", monospace;
+}
+
+#main2 {
+    align-content: center;
+    padding: 2em;
+    text-align: center;
+}
+
+/* Set the size of the containers */
+.drawing {
+	box-sizing: border-box;
+	margin: 1em;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.drawing-label {
+	margin: 2em;
+	text-align: center;
+}
+
+/* Set the size of the containers */
+.drawing-p5holder {
+	box-sizing: border-box;
+	margin: 10px;
+}

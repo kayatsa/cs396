@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: "consolas", monospace;
+}
+
+a {
+    color: rgb(143, 220, 250);
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+#main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 2em;
+    /*border: 1px dotted black;*/
+    text-align: center;
+}
+
+#title {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#subtitle {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: left;
+}
+
+td {
+    padding: 0.5em;
+}
