@@ -1,24 +1,22 @@
-let paused = false
-let grids = document.getElementsByClassName("p5-grid")
-let controls = document.getElementsByClassName("controls")
+let paused = false;
+let grids = document.getElementsByClassName("p5-grid");
+let controls = document.getElementsByClassName("controls");
 
-document.addEventListener('keyup', function(e){
-	if(e.keyCode == 32){
-		paused = !paused
+document.addEventListener("keyup", function (e) {
+	if (e.keyCode == 32) {
+		paused = !paused;
 	}
-	if(e.keyCode == 78){
-		sim.step()
+	if (e.keyCode == 78) {
+		sim.step();
 	}
-});  
+});
 
-let noise = new p5().noise
-let sim = new Simulation()
+let noise = new p5().noise;
+let sim = new Simulation();
 
-document.addEventListener("DOMContentLoaded", function()
-{
-	new Vue(
-	{
-		el : "#app",
+document.addEventListener("DOMContentLoaded", function () {
+	new Vue({
+		el: "#app",
 		template: `<div id="app">
 			<p>How can we simulate realistic formation, dissipation, and movement of clouds?
 			This question is actually commonly asked across several industries, and
@@ -81,22 +79,20 @@ document.addEventListener("DOMContentLoaded", function()
 			<p><small>I would've loved to add sliders to allow you to play around with the probability and threshold values, but I ran out of time :(
 				but feel free to look into the sim.js file and manually change the numbers yourself and see what changes!</small></p>
 		</div>`,
-		
-	})
+	});
 
 	// for (var g = 0; g < grids.length; g++)
 	// {
 	// 	grids[g].style.display = "none"
 	// 	controls[g].style.display = "none"
 	// }
+});
 
-})
+function hideGrid(n) {
+	if (grids[n].style.display === "none") grids[n].style.display = "block";
+	else grids[n].style.display = "none";
 
-function hideGrid(n)
-{
-	if (grids[n].style.display === "none") grids[n].style.display = "block"
-	else grids[n].style.display = "none"
-
-	if (controls[n].style.display === "none") controls[n].style.display = "block"
-	else controls[n].style.display = "none"
+	if (controls[n].style.display === "none")
+		controls[n].style.display = "block";
+	else controls[n].style.display = "none";
 }

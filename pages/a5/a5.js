@@ -1,5 +1,5 @@
 // Do setup
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 	new Vue({
 		el: "#app",
 		template: `<div id="app">
@@ -22,54 +22,49 @@ document.addEventListener("DOMContentLoaded", function(){
 		</div>`,
 
 		methods: {
-
 			postToChat(text, owner, isSelf) {
 				this.messages.push({
 					text: text,
 					isSelf: isSelf,
 					owner: owner,
-				})
+				});
 			},
 
 			enterInput() {
-				let text = this.currentInput
-				this.currentInput = ""
-				this.handleInput(text)
+				let text = this.currentInput;
+				this.currentInput = "";
+				this.handleInput(text);
 			},
 
-			handleInput(text)
-			{
-				if (text === "") return
+			handleInput(text) {
+				if (text === "") return;
 
 				// Does bot things
-				this.postToChat(text, "😐", true)
+				this.postToChat(text, "😐", true);
 
 				// Add to the messages in chat
-			
+
 				// Bot does something
-				let output = this.bot.respondTo(text)
+				let output = this.bot.respondTo(text);
 
 				setTimeout(() => {
-					let emoji = this.bot.plant === "the plant" ? "🌱" : "🌸"
-					this.postToChat(output, emoji)
-					
-				}, Math.random()*100 + 400)
-
-			}
+					let emoji = this.bot.plant === "the plant" ? "🌱" : "🌸";
+					this.postToChat(output, emoji);
+				}, Math.random() * 100 + 400);
+			},
 		},
-		
 
 		data() {
-			return{
+			return {
 				// Store the bot
-				bot: new CoffeeBot(),
+				bot: new ChatBot(),
 
 				// And the message
 				messages: [],
 
 				// And the current thing in the input
-				currentInput: ""
-			}
-		}
-	})	
-})
+				currentInput: "",
+			};
+		},
+	});
+});
