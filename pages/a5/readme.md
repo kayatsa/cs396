@@ -1,15 +1,22 @@
+## A5: Plantkeeper
+
+Chatbot with Tracery
+
 This bot serves as a mediator between you and the plant you are taking care of. You perform certain actions, the bot will inform you how the plant responds.
 
-**Inputs**
+### Features
 
-* CARE: Care for the plant. Increases HEALTH by 2. Decreases PLAYFULNESS by 1.
-* PLAY: Play with the plant. Decreases HEALTH by 1.
-    * If HEALTH ≤ 2, no change to PLAYFULNESS.
-    * If 3 ≤ HEALTH ≤ 6, increases PLAYFULNESS by 2.
-    * If HEALTH ≥ 7, increases PLAYFULNESS by 3.
-* WAIT: Do nothing. Decreases HEALTH by 1. Decreases PLAYFULNESS by 1.
+**CARE:** Care for the plant. Increases `health` by 2. Decreases `playfulness` by 1.
 
-**Bloom**
+**PLAY:** Play with the plant. Decreases `health` by 1.
 
-If HEALTH ≥ 9 and PLAYFULNESS ≥ 9, the plant will bloom into a flower.
-If either HEALTH or PLAYFULNESS ≤ 8, the flower will revert to an unbloomed plant.
+-   If `health` ≤ 2, no change to `playfulness`.
+-   If 3 ≤ `health` ≤ 6, increases `playfulness` by 2.
+-   If `health` ≥ 7, increases `playfulness` by 3.
+
+**WAIT:** Do nothing. Decreases `health` by 1. Decreases `playfulness` by 1.
+
+### Bloom
+
+If `health` ≥ 9 and `playfulness` ≥ 9, the plant will bloom into a flower.
+If then either `health` or `playfulness` ≤ 8, the flower will revert to an unbloomed plant.

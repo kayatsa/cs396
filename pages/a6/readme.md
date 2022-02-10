@@ -1,3 +1,9 @@
+## A6: Emoji Essay
+
+Game-of-life cellular automata
+
+### Analysis
+
 In the real world, the formation (and dissipation) of clouds depends on several meteorological factors, such as drafts, humidity/temperature of surrounding air, and even the terrain of the land below. While these factors by themselves aren't fundamentally complex, taking them all into consideration is what makes simulating clouds and realistic weather challenging. Thus, the behavior of clouds and weather is often simplified to make it close to realism as possible. In this essay, only the most basic phenomena is taken into consideration: the water cycle.
 
 Fundamentally, the water cycle rotates between evaporation, condensation, and precipitation. The simulations in this essay attempt to recreate a simple model of this cycle and visualizes it using cloud, rain cloud, and water droplet emojis. The main objective is to observe how adding certain elements of the water cycle affects the behavior of clouds. Specifically, **can clouds remain relatively consistent in size and shape if only the water cycle is involved (and no other meteorological factors)?**
